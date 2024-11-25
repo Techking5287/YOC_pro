@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./normalize.scss";
+@import "./widgets/index.scss";
+@import "./common/index.scss";
+@import "./home.scss";
+@import "./modal.scss";
+@import "./admin/index.scss";
+@import "./fund.scss";
+
+.hidden {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.right-info {
+    p {
+        text-align: right;
+    }
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-1 {
+    margin-bottom: 1px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (min-width: 860px) {
+        max-width: 100%;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        max-width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media only screen and (min-width: 1720px) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media only screen and (min-width: 10720px) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1640px;
+    }
+}
+
+.apexcharts-candlestick-area {
+    // fill: crimson !important;
+    // stroke: yellow;
+}
+
+.apexcharts-tooltip {
+    background: #142421 !important;
+
+    .apexcharts-tooltip-title {
+        background-color: #142421 !important;
+    }
+
+    .apexcharts-tooltip-box {
+        background: #142421 !important;
+    }
+}
+
+
+// .apexcharts-candlestick-area {
+//     fill: yellow;
+//     stroke: yellow;
+// }
+
+.apexcharts-menu {
+    background: #013c5e !important;
+
+    .apexcharts-menu-item:hover {
+        background: #012e47 !important;
+    }
+}
+
+
+.bg-home-box1 {
+    background: linear-gradient(0deg, rgb(230, 73, 128) 0%, rgb(121, 80, 242) 100%);
+}
+
+.bg-home-box2 {
+    background: linear-gradient(0deg, rgb(134, 142, 150) 0%, rgb(253, 126, 20) 100%);
+}
+
+.bg-home-box3 {
+    background: linear-gradient(0deg, rgb(121, 80, 242) 0%, rgb(64, 192, 87) 100%);
+}
+
+.bg-home-box4 {
+    background: linear-gradient(0deg, rgb(250, 176, 5) 0%, rgb(64, 192, 87) 100%)
+}
+
+
+
+.range-container {
+    input[type='range'] {
+        -webkit-appearance: none;
+        /* Remove default styling for WebKit browsers */
+        width: 100%;
+        /* Set the width of the range input */
+        height: 8px;
+        /* Set the height of the range input track */
+        background-color: #322f46;
+        /* Set the background color of the range input track */
+        border-radius: 5px;
+        /* Round the corners of the range input track */
+        outline: none;
+        /* Remove the default focus outline */
+
+        /* Customize the appearance of the range thumb */
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Remove default styling for WebKit browsers */
+            appearance: none;
+            /* Remove default styling for other browsers */
+            width: 20px;
+            /* Set the width of the range thumb */
+            height: 20px;
+            /* Set the height of the range thumb */
+            border-radius: 50%;
+            border: 1px solid white;
+            /* Make it circular */
+            background-color: #4CAF50;
+            /* Set the background color of the range thumb */
+            cursor: pointer;
+            /* Change the cursor when hovering over the thumb */
+            position: relative;
+            top: -10px;
+        }
+
+        /* Customize the appearance of the range track as the thumb moves */
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            /* Set the width of the range track */
+            height: 2px;
+            /* Set the height of the range track */
+            // background-color: #4CAF50;
+            /* Set the background color of the range track */
+            border-radius: 5px;
+            /* Round the corners of the range track */
+        }
+
+        /* Customize the appearance of the range thumb when active or being dragged */
+        &:active::-webkit-slider-thumb {
+            background-color: #0a9c0f;
+            /* Set a different background color when active */
+        }
+    }
+
+    input[type='range'].plus {
+        &::-webkit-slider-thumb {
+            background-color: #4CAF50;
+        }
+
+        &:active::-webkit-slider-thumb {
+            background-color: #0a9c0f;
+        }
+    }
+
+    input[type='range'].minus {
+        &::-webkit-slider-thumb {
+            background-color: #b81e1e;
+        }
+
+        &:active::-webkit-slider-thumb {
+            background-color: #9c0a0a;
+        }
+    }
+}
