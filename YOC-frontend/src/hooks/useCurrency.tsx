@@ -23,6 +23,7 @@ const useCurrency = () => {
     // }
     axiosInstance.get(`/currency/all`)
       .then((response) => {
+        console.log("response : ", response);
         let data: [] = response.data.currencies;
         currencyUpdate(data);
       }).catch((error) => {

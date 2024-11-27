@@ -111,7 +111,7 @@ const Navbar = () => {
     const { currencyRetireve, YOCDetail } = useCurrency();
     const isAdmin = useAdmin();
     const currentPath = useMemo(() => {
-        console.log(router.pathname);
+        console.log("router.pathname : ", router.pathname);
         return router.pathname;
     }, [router.pathname]);
 
@@ -221,7 +221,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center h-[48px]">
-                        <NetworkSelector className="w-[48px] h-[48px] "  />
+                        <NetworkSelector className="w-[48px] h-[48px] " />
                         <div className="cursor-pointer flex pl-7 pr-7 rounded-lg border-[1px] border-border-primary items-center h-full ml-1" onClick={() => addGlobalYOCTokenHandle()}>
                             <div className="min-w-[10px] p-1.5">
                                 <img src={`/images/coins/${YOC_TOKEN}.png`} className="min-w-[22px] w-[22px] h-[22px]" alt='wallet' />

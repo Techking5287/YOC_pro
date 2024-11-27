@@ -47,9 +47,11 @@ const AdminCurrency: FC<Props> = (props) => {
 
     useEffect(() => {
         if (account && isAdmin) {
+            console.log("account : ", account);
             (async () => {
                 setLoadData(true);
                 let res = await axios.get(process.env.API_ADDRESS + `/admin/currency/all?account=${account}`);
+                console.log("res : ", res);
                 setLoadData(false);
                 if (res && res.data) {
                     setAllCurrencies(res.data.currencies);
