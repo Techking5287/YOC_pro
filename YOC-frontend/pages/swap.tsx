@@ -434,13 +434,47 @@ const Swap: FC = () => {
                                             />
                                         </div>
                                         <div>
-                                            <p className='text-sm italic'>25%</p>
+                                            {/* <p className='text-sm italic'>25%</p>
                                             <p className='text-sm italic'>50%</p>
-                                            <p className='text-sm italic'>75%</p>
+                                            <p className='text-sm italic'>75%</p> */}
                                         </div>
-                                        <div className='flex items-center justify-between py-3'>
+                                        {/* <div className='flex items-center justify-between py-3'>
                                             <ProgressInput className='w-full' inputClassName='plus !bg-gray-400' value={percentageAmountIn} setValue={(v) => { setPercentageAmountIn(v); customAmountSetHandle('in', v) }} />
                                             <button className='bg-status-plus px-3 py-2 text-sm rounded shadow-btn-primary ml-2' onClick={() => { setPercentageAmountIn(100); customAmountSetHandle('in', 100) }}>Max</button>
+                                        </div> */}
+                                        <div className='flex items-center justify-between py-3'>
+                                            <ProgressInput
+                                                className='w-full'
+                                                inputClassName='plus !bg-gray-400'
+                                                value={percentageAmountIn}
+                                                setValue={(v) => { setPercentageAmountIn(v); customAmountSetHandle('in', v) }}
+                                            />
+                                            <div className='flex space-x-2'>
+                                                <button
+                                                    className='bg-status-plus px-3 py-2 text-sm rounded shadow-btn-primary'
+                                                    onClick={() => { setPercentageAmountIn(25); customAmountSetHandle('in', 25); }}
+                                                >
+                                                    25%
+                                                </button>
+                                                <button
+                                                    className='bg-status-plus px-3 py-2 text-sm rounded shadow-btn-primary'
+                                                    onClick={() => { setPercentageAmountIn(50); customAmountSetHandle('in', 50); }}
+                                                >
+                                                    50%
+                                                </button>
+                                                <button
+                                                    className='bg-status-plus px-3 py-2 text-sm rounded shadow-btn-primary'
+                                                    onClick={() => { setPercentageAmountIn(75); customAmountSetHandle('in', 75); }}
+                                                >
+                                                    75%
+                                                </button>
+                                                <button
+                                                    className='bg-status-plus px-3 py-2 text-sm rounded shadow-btn-primary'
+                                                    onClick={() => { setPercentageAmountIn(100); customAmountSetHandle('in', 100); }}
+                                                >
+                                                    Max
+                                                </button>
+                                            </div>
                                         </div>
                                         {/* <div className='flex items-center justify-between'>
                                                 <div className='flex items-center py-2'>
